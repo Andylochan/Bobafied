@@ -1,0 +1,79 @@
+body {
+color: #000;
+font-family: 'Cabin', sans-serif;
+font-weight: 400;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h3 {
+	text-align: center; 
+	padding-bottom: 2.5%;
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+#fullSize {
+	height: 100% !important;
+}
+
+.btn-primary {
+	background: #222;
+	border: none;
+}
+
+.drop-row {
+	position: absolute;
+    top: 50%;
+    left: 40%;
+    height: 30%;
+    width: 70%;
+    margin: -15% 0 0 -25%;
+}
+
+.jumbotron {
+	background-image: url(https://www.touristsecrets.com/wp-content/uploads/2019/07/zb-bubbletea-e1563507085711.jpg);
+	background-size: cover; 
+	opacity: 0.85;
+	color: white; 
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+	text-align: center; 
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	margin-top: 1.5em;
+}
+
+.thumbnail {
+	padding: 0; 
+}
+
+.thumbnail img {
+	object-fit: cover;
+	height: 220px !important;
+	width: 100%; 
+}
+
+.thumbnail .caption-full {
+	padding: 9px;
+}
+
+.delete-form {
+	display: inline;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+	font-weight: 700;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #000;
+	font-weight: 700;
+}

@@ -1,0 +1,101 @@
+body {
+    background-color: #000;
+    font-family: 'Cabin', sans-serif;
+	font-weight: 700
+}
+
+#landing-header {
+  z-index: 1; /* foward text, shown above images */
+  position: relative;
+  text-align: center;
+  padding-top: 40vh; /* view-height */
+}
+
+#landing-header h1 {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+/* Add dark overlay for text readability, unfinished */
+.image-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none; /* remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%; /* center images */
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+/* Image overlay for text readability */
+.slideshow li:before {
+	content: "";
+	position: absolute;
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background: rgba(25,40,35,0.3)
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(https://images.unsplash.com/photo-1529474944862-bf4949bd2f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+}
+.slideshow li:nth-child(2) {
+  background-image: url(https://i.ytimg.com/vi/2vflTEjF7wg/maxresdefault.jpg);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(https://cdn.shopify.com/s/files/1/2625/9204/files/best-boba-nyc-bar-pa-tea_1024x1024.jpg?v=1574974568);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(https://cdn2.lamag.com/wp-content/uploads/sites/6/2017/03/Premium-Matcha-with-Cotton-Candy-and-Boba-Pearls.jpg);
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(https://cdn2.lamag.com/wp-content/uploads/sites/6/2017/03/Guilt-Trip-with-Cookies-and-Cream-Ice-Cream-and-Boba-Pearls-1-1920x1280.jpg);
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
